@@ -1,0 +1,39 @@
+package dao;
+
+import java.util.List;
+
+import model.PedidosW;
+
+public class PedidosImpl implements pedidosDAO {
+
+	@Override
+	public void addPedido(PedidosW pedido) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<PedidosW> getPedidos() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void updatePedido(PedidosW pedido) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void deletePedido(int idPedido) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public PedidosW getPedido(int idPedido) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

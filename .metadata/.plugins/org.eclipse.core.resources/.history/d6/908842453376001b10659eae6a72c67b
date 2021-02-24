@@ -1,0 +1,31 @@
+package controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import model.PedidosW;
+import service.PedidosService;
+
+@Controller
+public class PedidosController {
+	
+	@Autowired
+	PedidosService service;
+	
+	@GetMapping(value="pedidos", produces=MediaType.APPLICATION_JSON_VALUE)
+	public List<PedidosW> getPedidos(){
+		return service.getPedidos();
+	}
+	
+	@PostMapping(value="pedidos",consumes=MediaType.APPLICATION_JSON_VALUE)
+	public String addPedido(@RequestBody PedidosW pedido) {
+		return String.valueOf(service.addPedido(pedido));
+	}
+
+}

@@ -1,0 +1,18 @@
+package controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import service.PedidosService;
+
+@Controller
+public class PedidosController {
+	
+	@Autowired
+	PedidosService service;
+	
+	public List<PedidosW> getPedidos(){
+		return service.getPedidos();
+	}
+
+}
